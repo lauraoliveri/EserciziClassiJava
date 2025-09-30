@@ -46,7 +46,7 @@ public class Controller {
                 c.leggiStringa();
                 break;
             case 6:
-//                c.totalizzatore();
+                c.totalizzatore();
                 break;
             case 7:
                 c.stampaVettore();

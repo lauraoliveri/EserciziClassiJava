@@ -133,38 +133,37 @@ public class Computatore {
 
     // totalizzatore
 
-//    public void totalizzatore(){
-//
-//        System.out.println("Inserisci un numero, se ti vuoi fermare scrivi stop.");
-//
-//        String valore = scan.nextLine();
-//
-//        boolean continua = true;
-//
-//        int conteggio = 0;
-//        int totale = 0;
-//
-//        do{
-//            if (valore.equals("stop")){
-//                continua = false;
-//
-//            }else{
-//                int numero = Integer.parseInt(valore); // converto la stringa in numero
-//                totale += numero;
-//                conteggio++;
-//            }
-//
-//        }while(continua);
-//
-//        if (!continua){
-//            int media = totale / conteggio;
-//            System.out.println("Il totale è: " + totale);
-//            System.out.println("La media è: " + media);
-//        }
-//
-//
-//
-//    }
+    public void totalizzatore(){
+
+        System.out.println("Inserisci un numero, se ti vuoi fermare scrivi stop.");
+
+        boolean continua = true;
+
+        int conteggio = 0;
+        int totale = 0;
+
+        do{
+            String valore = scan.nextLine();
+            if (valore.equals("stop")){
+                continua = false;
+
+            }else{
+                int numero = Integer.parseInt(valore); // converto la stringa in numero
+                totale += numero;
+                conteggio++;
+            }
+
+        }while(continua);
+
+        if (!continua){
+            int media = totale / conteggio;
+            System.out.println("Il totale è: " + totale);
+            System.out.println("La media è: " + media);
+        }
+
+
+
+    }
 
     public void stampaVettore(){
 
