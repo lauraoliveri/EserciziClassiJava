@@ -51,6 +51,12 @@ public class Controller {
             case 7:
                 c.stampaVettore();
                 break;
+            case 8:
+                c.nominativi();
+                break;
+            case 9:
+                c.ordinamento();
+                break;
         }
 
 

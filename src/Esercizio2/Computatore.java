@@ -1,5 +1,6 @@
 package Esercizio2;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -165,6 +166,7 @@ public class Computatore {
 
     }
 
+    // creo, riempio e stampo un array(di numeri)
     public void stampaVettore(){
 
         int[] myArr = new int[10];
@@ -196,4 +198,56 @@ public class Computatore {
            }
         }
     }
+
+    // creo, riempio e stampo un array(di nomi)
+    public void nominativi(){
+       String[] nomi = {
+               "Marco",
+               "Luca",
+               "Anna",
+               "Giulia",
+               "Francesco",
+               "Elisa",
+               "Paolo",
+               "Chiara",
+               "Davide",
+               "Sara"
+       };
+
+        for (int i = 0; i < nomi.length ; i++) {
+            System.out.println(i+1 + ") " + nomi[i]);
+        }
+    }
+
+    // creo, riempio e stampo un array(di nomi) in ordine
+    public void ordinamento(){
+        String[] nomi = {
+                "Marco",
+                "Luca",
+                "Anna",
+                "Giulia",
+                "Francesco",
+                "Elisa",
+                "Paolo",
+                "Chiara",
+                "Davide",
+                "Sara"
+        };
+
+        Arrays.sort(nomi);
+
+        // stampo l'array ordinato
+        for (int i = 0; i < nomi.length ; i++) {
+            if ( i == nomi.length -1){
+                System.out.println(nomi[i] + ".");
+            }else{
+                System.out.println(nomi[i] + ", ");
+            }
+
+        }
+    }
+
+
+
+   //
 }
