@@ -33,7 +33,9 @@ public class Controller {
             case 1:
                 c.pariDispari();
                 break;
-
+            case 2:
+                c.maggioreMinore();
+                break;
         }
 
 
