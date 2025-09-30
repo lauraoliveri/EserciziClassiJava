@@ -11,7 +11,7 @@ public class Computatore {
     public int leggiIntero(){
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Inserisci un numero intero e ti dirò se è pari o dispari");
+        System.out.println("Inserisci un numero intero");
 
         return scan.nextInt();
     }
@@ -77,5 +77,32 @@ public class Computatore {
             }
 
         }while(continua);
+    }
+
+    public void contatoreVerticale(){
+
+        System.out.println("Conterò fino a quel numero. Vedrai i numeri in verticale");
+
+        // chiamo il metodo per prendere il valore da input
+        int n = leggiIntero();
+
+        for (int i = 1; i <= n ; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public void contaOrizzontale(){
+
+        System.out.println("Conterò fino a quel numero. Vedrai i numeri in orizzontale");
+
+        // chiamo il metodo per prendere il valore da input
+        int n = leggiIntero();
+
+        for (int i = 1; i <= n ; i++) {
+            if ( i == n )
+            System.out.print(i + ".");
+            else
+                System.out.print(i + ", ");
+        }
     }
 }

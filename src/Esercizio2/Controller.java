@@ -36,6 +36,12 @@ public class Controller {
             case 2:
                 c.maggioreMinore();
                 break;
+            case 3:
+                c.contatoreVerticale();
+                break;
+            case 4:
+                c.contaOrizzontale();
+                break;
         }
 
 
