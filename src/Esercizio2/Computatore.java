@@ -1,5 +1,6 @@
 package Esercizio2;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Computatore {
@@ -127,6 +128,73 @@ public class Computatore {
                 System.out.println("NON SEI AL SEMAFORO.");
                 break;
 
+        }
+    }
+
+    // totalizzatore
+
+//    public void totalizzatore(){
+//
+//        System.out.println("Inserisci un numero, se ti vuoi fermare scrivi stop.");
+//
+//        String valore = scan.nextLine();
+//
+//        boolean continua = true;
+//
+//        int conteggio = 0;
+//        int totale = 0;
+//
+//        do{
+//            if (valore.equals("stop")){
+//                continua = false;
+//
+//            }else{
+//                int numero = Integer.parseInt(valore); // converto la stringa in numero
+//                totale += numero;
+//                conteggio++;
+//            }
+//
+//        }while(continua);
+//
+//        if (!continua){
+//            int media = totale / conteggio;
+//            System.out.println("Il totale è: " + totale);
+//            System.out.println("La media è: " + media);
+//        }
+//
+//
+//
+//    }
+
+    public void stampaVettore(){
+
+        int[] myArr = new int[10];
+
+        // popolo l array
+        for (int i = 0; i < myArr.length; i++) {
+            myArr[i] = (int)(Math.random() * 101);
+        }
+
+        System.out.println("Vuoi visualizare i numeri per riga o colonna?(scrivi 'riga' o 'colonna')");
+
+        String scelta = scan.nextLine().toLowerCase();
+
+        for (int i = 0; i < myArr.length; i++) {
+           switch(scelta){
+
+
+               case "riga": //stampa i numeri in riga
+                   if (i != myArr.length - 1) {
+                       System.out.print(myArr[i] + ", ");
+                   }else{
+                       System.out.print(myArr[i] + ".");
+                   }
+                   break;
+
+               case "colonna": //stampa i numeri in colonna
+                   System.out.println(myArr[i]);
+                   break;
+           }
         }
     }
 }

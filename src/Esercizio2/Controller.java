@@ -45,6 +45,12 @@ public class Controller {
             case 5:
                 c.leggiStringa();
                 break;
+            case 6:
+//                c.totalizzatore();
+                break;
+            case 7:
+                c.stampaVettore();
+                break;
         }
 
 
