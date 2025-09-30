@@ -4,22 +4,26 @@ import java.util.Scanner;
 
 public class Computatore {
 
+    // scanner input
+
+    private Scanner scan = new Scanner(System.in);
     // variabile per chiedere se l'utente vuole continuare
     boolean continua;
 
     // metodo per leggere un valore per il metodo pariDispari
-    public int leggiIntero(){
-        Scanner scan = new Scanner(System.in);
+    public int leggiIntero() {
 
         System.out.println("Inserisci un numero intero");
 
         return scan.nextInt();
+
     }
 
     // visualizzare se il numero è pari o dispari
     public void pariDispari() {
         do {
             int n = leggiIntero();
+            scan.nextLine(); // consuma l'invio dopo nextInt
 
             if (n % 2 == 0) {
                 System.out.println("Il numero " + n + " è pari");
@@ -29,7 +33,6 @@ public class Computatore {
 
             System.out.println("Vuoi continuare?");
 
-            Scanner scan = new Scanner(System.in);
             String scelta = scan.nextLine();
 
             continua = false;
@@ -44,10 +47,9 @@ public class Computatore {
 
     // visualizzare se i numeri dati in input sono uguali o qual è il maggiore
 
-    public void maggioreMinore(){
+    public void maggioreMinore() {
 
-        do{
-            Scanner scan = new Scanner(System.in);
+        do {
 
             System.out.println("Inserisci un numero intero");
 
@@ -59,12 +61,12 @@ public class Computatore {
             scan.nextLine(); // consuma l'invio dopo nextInt
 
 
-            if ( n == x) {
+            if (n == x) {
                 System.out.println("I numeri sono uguali");
-            } else if ( n > x ) {
-                System.out.println("Il numero maggiore è: " + n );
-            }else if ( x > n ) {
-                System.out.println("Il numero maggiore è: " + x );
+            } else if (n > x) {
+                System.out.println("Il numero maggiore è: " + n);
+            } else if (x > n) {
+                System.out.println("Il numero maggiore è: " + x);
             }
 
             System.out.println("Vuoi continuare?");
@@ -76,33 +78,55 @@ public class Computatore {
                 continua = true;
             }
 
-        }while(continua);
+        } while (continua);
     }
 
-    public void contatoreVerticale(){
+    public void contatoreVerticale() {
 
-        System.out.println("Conterò fino a quel numero. Vedrai i numeri in verticale");
+        System.out.println("Conterò fino a quel numero. Vedrai i numeri in verticale.");
 
         // chiamo il metodo per prendere il valore da input
         int n = leggiIntero();
 
-        for (int i = 1; i <= n ; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println(i);
         }
     }
 
-    public void contaOrizzontale(){
+    public void contaOrizzontale() {
 
-        System.out.println("Conterò fino a quel numero. Vedrai i numeri in orizzontale");
+        System.out.println("Conterò fino a quel numero. Vedrai i numeri in orizzontale.");
 
         // chiamo il metodo per prendere il valore da input
         int n = leggiIntero();
 
-        for (int i = 1; i <= n ; i++) {
-            if ( i == n )
-            System.out.print(i + ".");
-            else
-                System.out.print(i + ", ");
+        for (int i = 1; i <= n; i++) {
+            if (i == n) System.out.print(i + ".");
+            else System.out.print(i + ", ");
+        }
+    }
+
+    // semaforo
+
+    public void leggiStringa() {
+
+        System.out.println("Inserisci un colore del semaforo.");
+        String colore = scan.nextLine().toLowerCase();
+
+        switch (colore) {
+            case "rosso":
+                System.out.println("ALT");
+                break;
+            case "arancione":
+                System.out.println("ATTENZIONE");
+                break;
+            case "verde":
+                System.out.println("VAI");
+                break;
+            default:
+                System.out.println("NON SEI AL SEMAFORO.");
+                break;
+
         }
     }
 }

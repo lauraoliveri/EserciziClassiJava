@@ -42,6 +42,9 @@ public class Controller {
             case 4:
                 c.contaOrizzontale();
                 break;
+            case 5:
+                c.leggiStringa();
+                break;
         }
 
 
