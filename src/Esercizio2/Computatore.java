@@ -295,4 +295,35 @@ public class Computatore {
             System.out.println(i + " x " + dieci + " = " + moltiplicazione);
         }
     }
+
+    //meteo
+
+    public void meteo(){
+        int[][] m = {
+                {12, 14, 18, 15}, // Lunedì
+                {11, 13, 19, 16}, // Martedì
+                {10, 12, 17, 14}, // Mercoledì
+                {9, 11, 16, 13}, // Giovedì
+                {8, 10, 15, 12}, // Venerdì
+                {7, 9, 14, 11}, // Sabato
+                {6, 8, 13, 10}  // Domenica
+        };
+
+        // array per stampare i giorni
+        String[] giorni = {
+                "Lunedì", "Martedì", "Mercoledì",
+                "Giovedì", "Venerdì", "Sabato", "Domenica"
+        };
+
+        System.out.println("Meteo:");
+
+        // Stampo i giorni e le temperature
+        for (int i = 0; i < 7; i++) {
+            System.out.print(giorni[i] + ": ");
+            for (int k = 0; k < 4; k++) {
+                System.out.print(m[i][k] + " ");
+            }
+            System.out.println();
+        }
+    }
 }

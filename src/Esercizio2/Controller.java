@@ -12,61 +12,196 @@ public class Controller {
 
         Scanner s = new Scanner(System.in);
 
-        System.out.println("Scegli un algoritmo:\n" +
-                "1 – pariDispari\n" +
-                "2 – maggioreMinore\n" +
-                "3 – contatoreVerticale\n" +
-                "4 – contaOrizzontale\n" +
-                "5 – semaforo\n" +
-                "6 – totalizzatore\n" +
-                "7 – stampaVettore\n" +
-                "8 – nominativi\n" +
-                "9 – ordinamento\n" +
-                "10 – cercaNelVettore\n" +
-                "11 – stampaTabellina\n" +
-                "12 – meteo\n" +
-                "13 – ESCI");
 
-        int scelta = s.nextInt();
+        boolean continua = true; // per far ripartire il menù ogni volta che mettiamo n dopo il vuoi ripetere.
 
-        switch(scelta){
-            case 1:
-                c.pariDispari();
-                break;
-            case 2:
-                c.maggioreMinore();
-                break;
-            case 3:
-                c.contatoreVerticale();
-                break;
-            case 4:
-                c.contaOrizzontale();
-                break;
-            case 5:
-                c.leggiStringa();
-                break;
-            case 6:
-                c.totalizzatore();
-                break;
-            case 7:
-                c.stampaVettore();
-                break;
-            case 8:
-                c.nominativi();
-                break;
-            case 9:
-                c.ordinamento();
-                break;
-            case 10:
-                c.cercaNelVettore();
-                break;
-            case 11:
-                c.stampaTabellina();
-                break;
+        do {
 
-        }
+            // menù
+            System.out.println("Scegli un algoritmo:\n" +
+                    "1 – pariDispari\n" +
+                    "2 – maggioreMinore\n" +
+                    "3 – contatoreVerticale\n" +
+                    "4 – contaOrizzontale\n" +
+                    "5 – semaforo\n" +
+                    "6 – totalizzatore\n" +
+                    "7 – stampaVettore\n" +
+                    "8 – nominativi\n" +
+                    "9 – ordinamento\n" +
+                    "10 – cercaNelVettore\n" +
+                    "11 – stampaTabellina\n" +
+                    "12 – meteo\n" +
+                    "13 – ESCI");
+
+            int scelta = s.nextInt();
+            s.nextLine(); // per ripulire lo scanner
 
 
+            switch (scelta) {
+                case 1:
+
+                    boolean ripeti = true;
+
+
+                    // ogni opzione può essere rieseguita subito con un do-while
+                    // (domanda “ripetere l’operazione? s/n” con “no” torno al menu)
+                    do {
+                        c.pariDispari();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 2:
+
+                    ripeti = true;
+
+                    do {
+                        c.maggioreMinore();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 3:
+
+                    ripeti = true;
+
+                    do {
+                        c.contatoreVerticale();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 4:
+
+                    ripeti = true;
+
+                    do {
+                        c.contaOrizzontale();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 5:
+
+                    ripeti = true;
+
+                    do {
+                        c.leggiStringa();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 6:
+
+                    ripeti = true;
+
+                    do {
+                        c.totalizzatore();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 7:
+
+                    ripeti = true;
+
+                    do {
+                        c.stampaVettore();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 8:
+
+                    ripeti = true;
+
+                    do {
+                        c.nominativi();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 9:
+
+                    ripeti = true;
+
+                    do {
+                        c.ordinamento();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 10:
+
+                    ripeti = true;
+
+                    do {
+                        c.cercaNelVettore();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 11:
+
+                    ripeti = true;
+
+                    do {
+                        c.stampaTabellina();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 12:
+
+                    ripeti = true;
+
+                    do {
+                        c.meteo();
+                        System.out.println("Ripetere l’operazione? s/n");
+                        String r = s.nextLine();
+                        if (r.equalsIgnoreCase("n")) {
+                            ripeti = false;
+                        }
+                    } while (ripeti);
+                    break;
+                case 13: // per uscire dal menù
+                    continua = false;
+                    break;
+            }
+        } while (continua);
     }
 }
 
