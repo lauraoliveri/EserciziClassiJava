@@ -285,4 +285,14 @@ public class Computatore {
             System.out.println("Nome non trovato.");
         }
     }
+
+    // stampa tabellina del 10
+    public void stampaTabellina(){
+        int dieci = 10;
+
+        for (int i = 0; i <= dieci; i++) {
+            int moltiplicazione = i*10;
+            System.out.println(i + " x " + dieci + " = " + moltiplicazione);
+        }
+    }
 }

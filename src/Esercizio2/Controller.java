@@ -60,6 +60,10 @@ public class Controller {
             case 10:
                 c.cercaNelVettore();
                 break;
+            case 11:
+                c.stampaTabellina();
+                break;
+
         }
 
 
