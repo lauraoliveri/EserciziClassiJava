@@ -250,4 +250,39 @@ public class Computatore {
 
 
    //
+    public void cercaNelVettore(){
+        String[] nomi = {
+                "Marco",
+                "Luca",
+                "Anna",
+                "Giulia",
+                "Francesco",
+                "Elisa",
+                "Paolo",
+                "Chiara",
+                "Davide",
+                "Sara"
+        };
+
+        System.out.println("Inserisci un nome e ti dirò se è presente.");
+
+        String nome = scan.nextLine();
+
+        boolean trovato = false;
+
+        for (int i = 0; i < nomi.length; i++) {
+
+
+            if (nomi[i].equalsIgnoreCase(nome)){ //ignora il case
+                trovato = true;
+                break; // quando e se trova il nome interrompe il ciclo
+            }
+        }
+
+        if(trovato) {
+            System.out.println("Nome trovato.");
+        }else{
+            System.out.println("Nome non trovato.");
+        }
+    }
 }

@@ -57,6 +57,9 @@ public class Controller {
             case 9:
                 c.ordinamento();
                 break;
+            case 10:
+                c.cercaNelVettore();
+                break;
         }
 
 
